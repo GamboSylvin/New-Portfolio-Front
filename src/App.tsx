@@ -3,7 +3,7 @@ import Work from "./sections/Work";
 
 function App(){
     return (
-        <div className="text-gray-800">
+        <div className="text-gray-800" id="dataRoot">
             <Hero/>
             <Work/>
         </div>

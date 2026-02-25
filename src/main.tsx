@@ -7,8 +7,13 @@ import "./index.css";
 const router = createBrowserRouter([
   { path: "/", 
     Component: App,
-  },
-]);
+    // loader: async () => {
+    //   // Simulate fetching data from an API
+    //   const response = await fetch("localhost:8080/api/projects");
+    //   const projects = await response.json();
+    //   return { projects };
+    // }
+}]);
 
 
 createRoot(document.getElementById("root")!).render(
