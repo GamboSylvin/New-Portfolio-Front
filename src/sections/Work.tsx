@@ -1,25 +1,14 @@
 import TertiaryCTA from "../buttons/TertiaryCTA";
 import RightArrow from "../assets/right-arrow.svg?react";
-import ProjectList from "../CardsAndContainers/ProjectList";
-import projectImage from "../assets/projectImage.png";
-// import { useRouteLoaderData } from "react-router";
+import ProjectList, { type Project } from "../CardsAndContainers/ProjectList";
+// import projectImage from "../assets/projectImage.png";
+import { useRouteLoaderData } from "react-router";
 
-function Work() {
 
-  let projects = [
-    {
-      name: "Project 1",
-      description: "A comprehensive project that demonstrates my skills in React and TypeScript, featuring a responsive design and seamless user experience.",
-      id: 1,
-      link: "https://github.com/GamboSylvin/project-1",
-      technologies: ["React", "TypeScript", "CSS"],
-      category: "Frontend Development",
-      imageUrl: projectImage,
-    },
-  ];  
+function Work() { 
 
-  // let data =  useRouteLoaderData("dataRoot") as { projects: typeof projects };
-  // projects = data.projects;
+  let data =  useRouteLoaderData("dataRoot") as { content: Project[] };
+  let projects = data.content;
 
   return (
     <section id="work" className="work min-h-screen bg-gray-50">

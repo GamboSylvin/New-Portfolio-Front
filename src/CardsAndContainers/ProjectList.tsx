@@ -2,11 +2,12 @@ import ProjectCard from "./ProjectCard";
 
 type Project = {
   name: string;
-  description: string;
-  id: number;
+  overview: string;
+  id?: number;
   link: string;
   category: string;
   technologies: string[];
+  imageUrl?: string;
 };
 
 type ProjectListProps = {
@@ -24,3 +25,5 @@ function ProjectList({projects}: ProjectListProps) {
 }
 
 export default ProjectList;
+
+export type { Project };
