@@ -3,4 +3,5 @@
 
 @theme {
     --font-tiktok: 'TikTok Sans', sans-serif;
+    --breakpoint-xs: 400px;
 }
