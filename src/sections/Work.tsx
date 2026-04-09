@@ -1,24 +1,24 @@
 import TertiaryCTA from "../buttons/TertiaryCTA";
 import RightArrow from "../assets/right-arrow.svg?react";
 import ProjectList, { type Project } from "../CardsAndContainers/ProjectList";
-import projectImage from "../assets/projectImage.png";
-// import { useRouteLoaderData } from "react-router";
+// import projectImage from "../assets/projectImage.png";
+import { useRouteLoaderData } from "react-router";
 
 
 function Work() { 
 
-  // let data =  useRouteLoaderData("dataRoot") as { projs: { content: Project[] }};
-  // let projects = data.projs.content;
-  let projects: Project[] = [
-    {
-      name: "Project One",
-      overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      link: "https://github.com/GamboSylvin/project-one",
-      category: "Web Development",
-      technologies: ["React", "TypeScript", "Tailwind CSS"],
-      imageUrl: projectImage
-    },
-  ];
+  let data =  useRouteLoaderData("dataRoot") as { projs: { content: Project[] }};
+  let projects = data.projs.content;
+  // let projects: Project[] = [
+  //   {
+  //     name: "Project One",
+  //     overview: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //     link: "https://github.com/GamboSylvin/project-one",
+  //     category: "Web Development",
+  //     technologies: ["React", "TypeScript", "Tailwind CSS"],
+  //     imageUrl: projectImage
+  //   },
+  // ];
   return (
     <section id="work" className="work min-h-screen">
       <div className="container py-12 font-tiktok">

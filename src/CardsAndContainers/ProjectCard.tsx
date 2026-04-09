@@ -9,11 +9,12 @@ type ProjectCardProps = {
 };
 
 function ProjectCard({projectData}: ProjectCardProps) {
+    console.log("Rendering ProjectCard with data:", projectData.imageUrl);
   return (
     <div className="w-xs relative h-100 project-card flex flex-col items-start rounded-lg overflow-hidden shadow">
         <CategoryNotif category={projectData.category}/>
         <div className="w-full h-48 overflow-hidden">
-            <img src={projectData.imageUrl || ""} alt="project Image" className="w-full h-full object-cover"/>
+            <img src={`https://res.cloudinary.com/dosaqiiuk/image/upload/${projectData.imageUrl}`} alt="project Image" className="w-full h-full object-cover"/>
         </div>
         <div className="p-4">
             <h2 className="text-lg font-medium mb-2">{projectData.name}</h2>
